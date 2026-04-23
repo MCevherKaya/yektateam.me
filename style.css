@@ -471,3 +471,22 @@ footer{
     min-height:360px;
   }
 }
+.footer-logo-link{
+  width:34px;
+  height:34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.footer-logo{
+  width:28px;
+  height:28px;
+  object-fit:contain;
+  filter:drop-shadow(0 0 8px rgba(185,138,98,.35));
+  transition:0.3s ease;
+}
+
+.footer-logo:hover{
+  transform:scale(1.12);
+}
