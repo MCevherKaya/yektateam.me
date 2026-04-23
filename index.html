@@ -1,906 +1,121 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YEKTA TEAM</title>
-  <meta name="description" content="YEKTA TEAM | ROS2 tabanlı otonom insansız kara aracı geliştiren multidisipliner ekip." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg:#1a1410;
-      --bg-soft:#241b15;
-      --bg-card:#2b2119;
-      --cream:#efe4d6;
-      --cream-2:#dcc5ad;
-      --brown:#8f6b4f;
-      --brown-2:#b89068;
-      --line:rgba(255,255,255,.08);
-      --shadow:0 20px 50px rgba(0,0,0,.28);
-      --radius:24px;
-      --max:1200px;
-    }
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family:"Manrope", sans-serif;
-      background:
-        radial-gradient(circle at top right, rgba(184,144,104,.16), transparent 25%),
-        linear-gradient(180deg, #120e0b 0%, #1a1410 35%, #1d1612 100%);
-      color:var(--cream);
-      line-height:1.6;
-      overflow-x:hidden;
-    }
-
-    img{
-      max-width:100%;
-      display:block;
-    }
-
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
-
-    .container{
-      width:min(var(--max), calc(100% - 40px));
-      margin:0 auto;
-    }
-
-    .section{
-      padding:90px 0;
-    }
-
-    .eyebrow{
-      display:inline-block;
-      color:var(--cream-2);
-      font-size:.92rem;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      margin-bottom:14px;
-      position:relative;
-      padding-left:26px;
-    }
-
-    .eyebrow::before{
-      content:"";
-      position:absolute;
-      left:0;
-      top:50%;
-      width:16px;
-      height:1px;
-      background:var(--brown-2);
-      transform:translateY(-50%);
-    }
-
-    .section-title{
-      font-size:clamp(2rem, 4vw, 3.6rem);
-      line-height:1.05;
-      font-weight:800;
-      color:#f7efe7;
-      margin-bottom:18px;
-    }
-
-    .section-title .accent{
-      color:var(--brown-2);
-    }
-
-    .muted{
-      color:rgba(239,228,214,.78);
-      font-size:1.05rem;
-    }
-
-    /* NAV */
-    .nav-wrap{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      backdrop-filter:blur(12px);
-      background:rgba(18,14,11,.72);
-      border-bottom:1px solid var(--line);
-    }
-
-    .navbar{
-      height:82px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      min-width:0;
-    }
-
-    .brand-logo{
-      width:54px;
-      height:54px;
-      object-fit:contain;
-      border-radius:14px;
-      background:rgba(255,255,255,.03);
-      padding:4px;
-      box-shadow:var(--shadow);
-      flex-shrink:0;
-    }
-
-    .brand-text{
-      display:flex;
-      flex-direction:column;
-      line-height:1.1;
-    }
-
-    .brand-text strong{
-      font-size:1.15rem;
-      letter-spacing:.02em;
-    }
-
-    .brand-text span{
-      font-size:.8rem;
-      color:rgba(239,228,214,.7);
-    }
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:28px;
-      list-style:none;
-      flex-wrap:wrap;
-      justify-content:center;
-    }
-
-    .nav-links a{
-      color:rgba(239,228,214,.86);
-      font-weight:600;
-      font-size:.98rem;
-      transition:.25s ease;
-    }
-
-    .nav-links a:hover{
-      color:#fff;
-    }
-
-    .nav-cta{
-      padding:12px 18px;
-      border-radius:14px;
-      background:linear-gradient(135deg, var(--brown-2), #c9a177);
-      color:#1a1410;
-      font-weight:800;
-      white-space:nowrap;
-      box-shadow:var(--shadow);
-    }
-
-    /* HERO */
-    .hero{
-      padding:72px 0 48px;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:36px;
-      align-items:center;
-    }
-
-    .hero-copy{
-      padding:28px 0;
-    }
-
-    .hero-title{
-      font-size:clamp(2.8rem, 6vw, 5.4rem);
-      line-height:.97;
-      font-weight:800;
-      letter-spacing:-.03em;
-      margin-bottom:22px;
-      max-width:760px;
-    }
-
-    .hero-title .accent{
-      color:var(--brown-2);
-    }
-
-    .hero-desc{
-      font-size:1.08rem;
-      color:rgba(239,228,214,.8);
-      max-width:640px;
-      margin-bottom:30px;
-    }
-
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      margin-bottom:26px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:15px 22px;
-      border-radius:16px;
-      font-weight:800;
-      transition:.25s ease;
-      border:1px solid transparent;
-    }
-
-    .btn-primary{
-      background:linear-gradient(135deg, var(--brown-2), #d0ab82);
-      color:#1a1410;
-      box-shadow:var(--shadow);
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-2px);
-    }
-
-    .btn-secondary{
-      border-color:rgba(220,197,173,.25);
-      color:var(--cream);
-      background:rgba(255,255,255,.02);
-    }
-
-    .btn-secondary:hover{
-      background:rgba(255,255,255,.05);
-    }
-
-    .hero-mini{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-      color:rgba(239,228,214,.75);
-      font-size:.96rem;
-    }
-
-    .hero-visual{
-      position:relative;
-      min-height:560px;
-      border-radius:32px;
-      overflow:hidden;
-      background:
-        radial-gradient(circle at 72% 20%, rgba(184,144,104,.22), transparent 22%),
-        linear-gradient(135deg, #0f0c09 0%, #1e1712 40%, #261d16 100%);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:32px;
-    }
-
-    .hero-glow{
-      position:absolute;
-      inset:auto -40px -60px auto;
-      width:260px;
-      height:260px;
-      background:radial-gradient(circle, rgba(184,144,104,.35), transparent 70%);
-      filter:blur(10px);
-      pointer-events:none;
-    }
-
-    .hero-logo-bg{
-      position:absolute;
-      inset:50% auto auto 50%;
-      transform:translate(-50%,-50%);
-      width:min(72%, 420px);
-      opacity:.16;
-      filter:drop-shadow(0 10px 30px rgba(0,0,0,.4));
-    }
-
-    .hero-card{
-      position:relative;
-      z-index:2;
-      width:min(100%, 470px);
-      padding:34px;
-      border-radius:28px;
-      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.08);
-      backdrop-filter:blur(10px);
-    }
-
-    .hero-card h3{
-      font-size:1.8rem;
-      margin-bottom:12px;
-    }
-
-    .hero-card p{
-      color:rgba(239,228,214,.8);
-      margin-bottom:24px;
-    }
-
-    .hero-list{
-      display:grid;
-      gap:12px;
-    }
-
-    .hero-list li{
-      list-style:none;
-      padding:14px 16px;
-      border-radius:16px;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.06);
-      color:rgba(247,239,231,.92);
-      font-weight:600;
-    }
-
-    /* ABOUT */
-    .about-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:28px;
-      align-items:stretch;
-    }
-
-    .about-copy{
-      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:34px;
-      box-shadow:var(--shadow);
-    }
-
-    .about-panel{
-      background:
-        linear-gradient(135deg, rgba(184,144,104,.16), rgba(255,255,255,.02)),
-        var(--bg-card);
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:34px;
-      box-shadow:var(--shadow);
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-    }
-
-    .about-points{
-      display:grid;
-      gap:14px;
-      margin-top:20px;
-    }
-
-    .about-points div{
-      padding:16px 18px;
-      border-radius:18px;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.05);
-    }
-
-    .about-points strong{
-      display:block;
-      margin-bottom:4px;
-      color:#fff;
-    }
-
-    /* STATS */
-    .stats{
-      padding-top:22px;
-    }
-
-    .stats-grid{
-      display:grid;
-      grid-template-columns:repeat(4, 1fr);
-      gap:18px;
-    }
-
-    .stat{
-      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:28px 22px;
-      text-align:center;
-      box-shadow:var(--shadow);
-    }
-
-    .stat h3{
-      font-size:2.2rem;
-      margin-bottom:8px;
-      color:#fff;
-    }
-
-    .stat p{
-      color:rgba(239,228,214,.78);
-      font-weight:600;
-    }
-
-    /* PROJECTS */
-    .projects-grid{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:20px;
-    }
-
-    .project-card{
-      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:26px;
-      box-shadow:var(--shadow);
-    }
-
-    .project-card h3{
-      font-size:1.25rem;
-      margin-bottom:10px;
-    }
-
-    .project-card p{
-      color:rgba(239,228,214,.78);
-      margin-bottom:18px;
-    }
-
-    .tag{
-      display:inline-block;
-      padding:8px 12px;
-      border-radius:999px;
-      background:rgba(184,144,104,.14);
-      border:1px solid rgba(184,144,104,.25);
-      color:var(--cream-2);
-      font-size:.88rem;
-      font-weight:700;
-      margin:4px 6px 0 0;
-    }
-
-    /* TEAM */
-    .team-grid{
-      display:grid;
-      grid-template-columns:repeat(4, 1fr);
-      gap:20px;
-    }
-
-    .member{
-      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:26px;
-      box-shadow:var(--shadow);
-      min-height:240px;
-      display:flex;
-      flex-direction:column;
-      justify-content:flex-end;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .member::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.01), transparent 34%),
-        radial-gradient(circle at top right, rgba(184,144,104,.15), transparent 35%);
-      pointer-events:none;
-    }
-
-    .member .role{
-      color:var(--cream-2);
-      font-weight:700;
-      margin-top:4px;
-    }
-
-    .member .line{
-      width:42px;
-      height:2px;
-      background:var(--brown-2);
-      margin-bottom:16px;
-      border-radius:999px;
-    }
-
-    /* CTA */
-    .cta-box{
-      background:
-        linear-gradient(135deg, rgba(184,144,104,.28), rgba(255,255,255,.04)),
-        #241a13;
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:34px;
-      box-shadow:var(--shadow);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .cta-left{
-      display:flex;
-      align-items:center;
-      gap:18px;
-    }
-
-    .cta-left img{
-      width:62px;
-      height:62px;
-      object-fit:contain;
-      border-radius:16px;
-      background:rgba(255,255,255,.03);
-      padding:4px;
-    }
-
-    .cta-left h3{
-      font-size:1.7rem;
-      margin-bottom:4px;
-    }
-
-    .cta-left p{
-      color:rgba(239,228,214,.78);
-    }
-
-    /* CONTACT */
-    .contact-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
-    }
-
-    .contact-card{
-      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:26px;
-      box-shadow:var(--shadow);
-    }
-
-    .contact-card h3{
-      margin-bottom:10px;
-      font-size:1.2rem;
-    }
-
-    .contact-card p, .contact-card a{
-  color:rgba(239,228,214,.8);
-}
-
-.contact-card a{
-  display:inline-block;
-  margin-top:6px;
-  font-weight:700;
-  transition:.25s ease;
-}
-
-.contact-card a:hover{
-  color:var(--brown-2);
-}
-
-    /* FOOTER */
-    footer{
-      border-top:1px solid var(--line);
-      padding:28px 0 40px;
-      color:rgba(239,228,214,.68);
-      background:rgba(0,0,0,.12);
-    }
-
-    .footer-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 1100px){
-      .hero-grid,
-      .about-grid,
-      .contact-grid{
-        grid-template-columns:1fr;
-      }
-
-      .projects-grid{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .team-grid{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .stats-grid{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .hero-visual{
-        min-height:440px;
-      }
-    }
-
-    @media (max-width: 760px){
-      .navbar{
-        height:auto;
-        padding:18px 0;
-        flex-direction:column;
-        align-items:flex-start;
-      }
-
-      .nav-links{
-        gap:16px;
-      }
-
-      .hero{
-        padding-top:38px;
-      }
-
-      .hero-title{
-        font-size:2.5rem;
-      }
-
-      .projects-grid,
-      .team-grid,
-      .stats-grid{
-        grid-template-columns:1fr;
-      }
-
-      .section{
-        padding:72px 0;
-      }
-
-      .hero-visual{
-        min-height:380px;
-        padding:20px;
-      }
-
-      .hero-card{
-        padding:24px;
-      }
-
-      .cta-left{
-        align-items:flex-start;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="nav-wrap">
     <div class="container navbar">
-      <a href="#top" class="brand">
-        <img src="logo.jpeg" alt="YEKTA TEAM logosu" class="brand-logo">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="YEKTA TEAM Logo">
         <div class="brand-text">
           <strong>YEKTA TEAM</strong>
-          <span>Otonom Kara Araçları</span>
+          <span>İnsansız Kara Araçları</span>
         </div>
       </a>
 
       <ul class="nav-links">
-        <li><a href="#top">Ana Sayfa</a></li>
-        <li><a href="#about">Hakkımızda</a></li>
-        <li><a href="#projects">Projeler</a></li>
-        <li><a href="#team">Ekibimiz</a></li>
-        <li><a href="#contact">İletişim</a></li>
+        <li><a class="active" href="index.html">Ana Sayfa</a></li>
+        <li><a href="about.html">Hakkımızda</a></li>
+        <li><a href="projects.html">Projeler</a></li>
+        <li><a href="teams.html">Ekipler</a></li>
+        <li><a href="apply.html">Başvuru</a></li>
+        <li><a href="contact.html">İletişim</a></li>
       </ul>
 
-      <a class="nav-cta" href="#contact">Bize Ulaşın</a>
+      <a href="contact.html" class="nav-btn">Bize Ulaşın</a>
     </div>
   </div>
 
-  <main id="top">
-    <section class="hero">
+  <main>
+    <section class="page-hero">
       <div class="container hero-grid">
-        <div class="hero-copy">
+        <div>
           <span class="eyebrow">YEKTA TEAM</span>
-          <h1 class="hero-title">
+          <h1 class="title">
             Yarını Bugünden
             <span class="accent">Tasarlıyoruz.</span>
           </h1>
-          <p class="hero-desc">
-            YEKTA TEAM; yazılım, elektronik, mekatronik ve endüstriyel tasarım disiplinlerini bir araya getiren,
-            ROS2 tabanlı otonom insansız kara aracı sistemleri geliştiren multidisipliner bir ekiptir. 
+          <p class="lead">
+            YEKTA TEAM, İstanbul Ticaret Üniversitesi öğrencileri tarafından kurulmuş,
+            otonom ve görev odaklı kara araçları geliştirmeye odaklanan multidisipliner bir takımdır.
           </p>
 
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">Projeleri İncele</a>
-            <a href="#about" class="btn btn-secondary">Takımı Tanı</a>
-          </div>
-
-          <div class="hero-mini">
-            <span>ROS2 Tabanlı Mimari</span>
-            <span>Sensör Füzyonu</span>
-            <span>Otonom Algılama</span>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="projects.html">Projeleri İncele</a>
+            <a class="btn btn-secondary" href="teams.html">Ekibi Tanı</a>
           </div>
         </div>
 
-        <div class="hero-visual">
-          <img src="logo.jpeg" alt="YEKTA Logo" class="hero-logo-bg">
-
-          <div class="hero-card">
-            <h3>İnsansız Kara Aracı Geliştirme</h3>
+        <div class="hero-card">
+          <div class="hero-card-content">
+            <h3>Disiplinler arası güçlü yapı</h3>
             <p>
-              Proje odağımız; zorlu arazi koşullarında çalışabilecek, sensör füzyonu ve otonom karar verme altyapısına sahip
-              güvenilir bir kara aracı geliştirmektir. 
+              Yazılım, elektronik, mekanik, endüstriyel tasarım ve sponsorluk birimleriyle
+              takım olarak koordineli bir geliştirme süreci yürütüyoruz.
             </p>
-            <ul class="hero-list">
-              <li>ROS2 tabanlı modüler yazılım</li>
-              <li>YOLO destekli algılama yaklaşımı</li>
-              <li>Jetson + STM32 tabanlı kontrol yapısı</li>
-            </ul>
           </div>
-
-          <div class="hero-glow"></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="about">
-      <div class="container about-grid">
-        <div class="about-copy">
+    <section class="section">
+      <div class="container grid-2">
+        <div class="card">
           <span class="eyebrow">Hakkımızda</span>
-          <h2 class="section-title">
-            Tutku, Disiplin
-            <span class="accent">ve İnovasyon</span>
-          </h2>
-          <p class="muted">
-            Takımımız; düzenli toplantılar, görev takibi ve iteratif geliştirme yaklaşımıyla çalışan, üretim ve öğrenme odaklı
-            bir ekip yapısına sahiptir. 
+          <h2 class="title">Tutku, Disiplin <span class="accent">ve Üretim</span></h2>
+          <p>
+            Takımımız, yarışma sürecine hazırlanırken mühendislik yaklaşımını ekip uyumu ve sürdürülebilir gelişim anlayışıyla birleştirir.
           </p>
         </div>
 
-        <div class="about-panel">
-          <div class="about-points">
-            <div>
-              <strong>Algılama ve Karar Verme</strong>
-              Kamera, IMU, encoder ve ultrasonik sensör verilerini birleştiren sensör füzyonu yaklaşımı.
-            </div>
-            <div>
-              <strong>Görüntü İşleme</strong>
-              YOLO tabanlı nesne ve trafik tabelası algılama, gerçek zamanlı çalışmaya uygun optimizasyon yaklaşımı.
-            </div>
-            <div>
-              <strong>Güvenli Sistem Mimarisi</strong>
-              Fail-safe mantığı, modüler kontrol altyapısı ve gerçek araç öncesi simülasyon odaklı geliştirme. 
-            </div>
-          </div>
+        <div class="card">
+          <span class="eyebrow">Yaklaşımımız</span>
+          <h3>Güvenilir, düzenli ve gelişime açık</h3>
+          <p>
+            Hedefimiz; tasarım, entegrasyon, test ve geliştirme süreçlerini planlı şekilde ilerleterek
+            üniversitemizi en iyi biçimde temsil etmektir.
+          </p>
         </div>
       </div>
 
       <div class="container stats">
-        <div class="stats-grid">
-          <div class="stat">
-            <h3>21+</h3>
-            <p>Takım Üyesi</p>
-          </div>
-          <div class="stat">
-            <h3>ROS2</h3>
-            <p>Merkez Yazılım Altyapısı</p>
-          </div>
-          <div class="stat">
-            <h3>YOLO</h3>
-            <p>Algılama Yaklaşımı</p>
-          </div>
-          <div class="stat">
-            <h3>Jetson</h3>
-            <p>Yüksek Seviye İşlem Birimi</p>
-          </div>
+        <div class="stat">
+          <h3>25</h3>
+          <p>Takım Üyesi</p>
+        </div>
+        <div class="stat">
+          <h3>5</h3>
+          <p>Ana Birim</p>
+        </div>
+        <div class="stat">
+          <h3>İKA</h3>
+          <p>Yarışma Odağı</p>
+        </div>
+        <div class="stat">
+          <h3>2025</h3>
+          <p>Aktif Süreç</p>
         </div>
       </div>
-    </section>
-
-    <section class="section" id="projects">
-      <div class="container">
-        <span class="eyebrow">Projeler</span>
-        <h2 class="section-title">
-          Geliştirdiğimiz
-          <span class="accent">Odak Alanları</span>
-        </h2>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <h3>Otonom Kara Aracı Platformu</h3>
-            <p>
-              Zorlu parkur ve arazi koşullarında görev yapabilecek dayanıklı, görev odaklı insansız kara aracı geliştirme çalışması. 
-            </p>
-            <span class="tag">UGV</span>
-            <span class="tag">Arazi Platformu</span>
-          </article>
-
-          <article class="project-card">
-            <h3>Sensör Füzyonu ve Konumlama</h3>
-            <p>
-              Stereo kamera, IMU, encoder ve ultrasonik sensörlerden elde edilen verileri bir araya getiren algılama altyapısı. 
-            </p>
-            <span class="tag">EKF</span>
-            <span class="tag">ROS2</span>
-          </article>
-
-          <article class="project-card">
-            <h3>Görüntü İşleme ve Nesne Tanıma</h3>
-            <p>
-              YOLO tabanlı nesne ve tabela algılama, görev geçişlerini destekleyen gerçek zamanlı görüntü işleme yaklaşımı. 
-            </p>
-            <span class="tag">YOLO</span>
-            <span class="tag">Gerçek Zamanlı</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="team">
-      <div class="container">
-        <span class="eyebrow">Ekibimiz</span>
-        <h2 class="section-title">
-          Gücümüz
-          <span class="accent">Birliğimizden</span>
-        </h2>
-<div class="team-grid">
-  <div class="member">
-    <div class="line"></div>
-    <h3>Yazılım Birimi</h3>
-    <p class="role">ROS2, algılama, görüntü işleme ve görev yönetimi</p>
-  </div>
-
-  <div class="member">
-    <div class="line"></div>
-    <h3>Elektronik Birimi</h3>
-    <p class="role">Kontrol kartları, güç sistemi ve haberleşme altyapısı</p>
-  </div>
-
-  <div class="member">
-    <div class="line"></div>
-    <h3>Mekanik Birimi</h3>
-    <p class="role">Şasi, yürüyüş sistemi, üretim ve mekanik entegrasyon</p>
-  </div>
-
-  <div class="member">
-    <div class="line"></div>
-    <h3>Endüstriyel Tasarım Birimi</h3>
-    <p class="role">Araç dış tasarımı, gövde yapısı ve tasarım bütünlüğü</p>
-  </div>
-</div>
-  </div>
-
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="cta-box">
-          <div class="cta-left">
-            <img src="logo.jpeg" alt="YEKTA Logo">
-            <div>
-              <h3>Sen de bu yolculuğun bir parçası ol.</h3>
-              <p>İş birliği, sponsorluk ve ekip iletişimi için bizimle bağlantıya geçebilirsin.</p>
-            </div>
-          </div>
-
-          <a href="#contact" class="btn btn-primary">İletişime Geç</a>
+      <div class="container cta-box">
+        <div>
+          <span class="eyebrow">İş Birliği</span>
+          <h3 style="font-size:1.7rem; margin-bottom:8px;">Sponsorluk ve teknik iş birliği görüşmelerine açığız.</h3>
+          <p style="color:rgba(244,234,223,.78);">
+            Takımımıza destek olmak veya iş birliği geliştirmek isterseniz bizimle iletişime geçebilirsiniz.
+          </p>
         </div>
+
+        <a class="btn btn-primary" href="apply.html">Başvuru Seçenekleri</a>
       </div>
     </section>
-
-<section class="section" id="contact">
-  <div class="container">
-    <span class="eyebrow">İletişim</span>
-    <h2 class="section-title">
-      Bizimle
-      <span class="accent">Bağlantı Kurun</span>
-    </h2>
-
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h3>E-posta</h3>
-        <p>
-          <a href="mailto:yekta.team26@gmail.com">yekta.team26@gmail.com</a>
-        </p>
-      </div>
-
-      <div class="contact-card">
-        <h3>Sosyal Medya</h3>
-        <p><a href="https://www.instagram.com/yekta.team.ika?igsh=cjB4dmNuOGNjdHhp&utm_source=qr" target="_blank">Instagram</a></p>
-        <p><a href="https://www.linkedin.com/company/yekta-team/?viewAsMember=true" target="_blank">LinkedIn</a></p>
-      </div>
-    </div>
-  </div>
-</section>
   </main>
 
   <footer>
