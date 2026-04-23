@@ -480,8 +480,8 @@ footer{
 }
 
 .footer-logo{
-  width:28px;
-  height:28px;
+  width:34px;
+  height:34px;
   object-fit:contain;
   filter:drop-shadow(0 0 8px rgba(185,138,98,.35));
   transition:0.3s ease;
