@@ -194,8 +194,8 @@ img{
   content:"";
   position:absolute;
   inset:0;
-  background:url("logo.png") center/260px no-repeat;
-  opacity:.10;
+  background:url("logo.png") center/340px no-repeat;
+  opacity:.13;
 }
 
 .hero-card-content{
