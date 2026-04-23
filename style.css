@@ -194,7 +194,7 @@ img{
   content:"";
   position:absolute;
   inset:0;
-  background:url("logo.png") center/340px no-repeat;
+  background:url("logo.png") center/430px no-repeat;
   opacity:.13;
 }
 
@@ -274,9 +274,9 @@ img{
 
 /* STATS */
 .stats{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:22px;
+  display:grid !important;
+  grid-template-columns:repeat(4, 1fr) !important;
+  gap:22px !important;
   margin-top:30px;
 }
 
@@ -435,13 +435,13 @@ footer{
   }
 
   .stats{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 600px){
   .stats{
-    grid-template-columns:1fr;
+    grid-template-columns:1fr !important;
   }
 }
 
