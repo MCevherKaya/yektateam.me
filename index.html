@@ -1,134 +1,104 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YEKTA Team</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background: #0f172a;
-      color: white;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #111827;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #334155;
-    }
-
-    header h1 {
-      color: #38bdf8;
-      font-size: 28px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 15px;
-    }
-
-    .hero {
-      padding: 80px 40px;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 42px;
-      margin-bottom: 20px;
-      color: #38bdf8;
-    }
-
-    .hero p {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 18px;
-      color: #cbd5e1;
-    }
-
-    .section {
-      padding: 60px 40px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .section h3 {
-      font-size: 30px;
-      margin-bottom: 20px;
-      color: #38bdf8;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 14px;
-      margin-top: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      border-top: 1px solid #334155;
-      color: #94a3b8;
-      margin-top: 40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEKTA TEAM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <h1>YEKTA Team</h1>
-    <nav>
-      <a href="#about">Hakkımızda</a>
-      <a href="#projects">Projeler</a>
-      <a href="#contact">İletişim</a>
-    </nav>
-  </header>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="YEKTA TEAM Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#about">Hakkımızda</a></li>
+                <li><a href="#team">Ekibimiz</a></li>
+                <li><a href="#projects">Projeler</a></li>
+                <li><a href="#apply">Başvuru</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section class="hero">
-    <h2>Otonom Sistemler Geliştiren Ar-Ge Takımı</h2>
-    <p>
-      YEKTA Team, yazılım, mekanik, elektronik ve endüstriyel tasarım alanlarında çalışan,
-      zorlu arazi koşullarında görev yapabilen insansız kara araçları geliştirmeye odaklanan
-      multidisipliner bir takımdır.
-    </p>
-  </section>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Yarını Bugünden Tasarlarız</h1>
+            <p>Otomotiv dünyasında inovasyon, performans ve teknolojiyle geleceği tasarıyoruz.</p>
+            <a href="#projects" class="btn">Projelerimizi Keşfet</a>
+        </div>
+        <img src="car_image.jpg" alt="Futuristic Car" class="hero-img">
+    </section>
 
-  <section class="section" id="about">
-    <h3>Hakkımızda</h3>
-    <div class="card">
-      Takımımız; otonom karar verme, görüntü işleme, sensör entegrasyonu, mobilite ve
-      görev odaklı sistem tasarımı üzerine çalışmaktadır. Amacımız, gerçek dünyada
-      kullanılabilecek güvenilir ve yenilikçi insansız kara aracı sistemleri geliştirmektir.
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about">
+        <h2>Hakkımızda</h2>
+        <p>YEKTA Team, genç mühendislerin gücünü birleştirerek otomotiv teknolojilerinde fark yaratmayı hedefliyor. Sürdürülebilirlik, güvenilirlik ve yüksek performanslı çözümlerle geleceğin standartlarını belirliyoruz.</p>
+    </section>
 
-  <section class="section" id="projects">
-    <h3>Projeler</h3>
-    <div class="card">
-      Yakında güncellenecek proje detayları burada yer alacak.
-    </div>
-  </section>
+    <!-- Achievements -->
+    <section id="achievements">
+        <div class="achievement">
+            <h3>25+</h3>
+            <p>Takım Üyesi</p>
+        </div>
+        <div class="achievement">
+            <h3>10+</h3>
+            <p>Başarı & Ödül</p>
+        </div>
+        <div class="achievement">
+            <h3>8+</h3>
+            <p>Aktif Proje</p>
+        </div>
+        <div class="achievement">
+            <h3>3+</h3>
+            <p>Yarış & Etkinlik</p>
+        </div>
+    </section>
 
-  <section class="section" id="contact">
-    <h3>İletişim</h3>
-    <div class="card">
-      Bizimle iletişime geçmek ve iş birlikleri için yakında iletişim bilgilerimizi burada paylaşacağız.
-    </div>
-  </section>
+    <!-- Team Section -->
+    <section id="team">
+        <h2>Ekibimiz</h2>
+        <div class="team-member">
+            <img src="cehver.jpg" alt="Cevher Kaya">
+            <h3>Cevher Kaya</h3>
+            <p>Takım Lideri</p>
+        </div>
+        <div class="team-member">
+            <img src="merve.jpg" alt="Merve Aydın">
+            <h3>Merve Aydın</h3>
+            <p>Mekanik Sorumlusu</p>
+        </div>
+        <div class="team-member">
+            <img src="emre.jpg" alt="Emre Yılmaz">
+            <h3>Emre Yılmaz</h3>
+            <p>Elektronik Sorumlusu</p>
+        </div>
+        <div class="team-member">
+            <img src="arda.jpg" alt="Arda Demir">
+            <h3>Arda Demir</h3>
+            <p>Tasarım Sorumlusu</p>
+        </div>
+    </section>
 
-  <footer>
-    © 2026 YEKTA Team. Tüm hakları saklıdır.
-  </footer>
+    <!-- Call to Action Section -->
+    <section id="apply">
+        <h2>Sen de Bizimle Ol!</h2>
+        <p>YEKTA Team ailesine katılmak için başvurunu yap.</p>
+        <a href="#contact" class="btn">Başvuru Yap</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 YEKTA TEAM. Tüm hakları saklıdır.</p>
+    </footer>
 </body>
+
 </html>
