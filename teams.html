@@ -2,121 +2,70 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="YEKTA TEAM - İstanbul Ticaret Üniversitesi öğrencilerinden oluşan insansız kara aracı ve otonom sistemler AR-GE takımı.">
+  <meta name="theme-color" content="#050806">
+  <meta property="og:title" content="Ekipler | YEKTA TEAM">
+  <meta property="og:description" content="YEKTA TEAM | İnsansız Kara Aracı ve Otonom Sistemler">
+  <meta property="og:image" content="vehicle.png">
   <title>Ekipler | YEKTA TEAM</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="nav-wrap">
-    <div class="container navbar">
-      <a href="index.html" class="brand">
+  <div class="noise"></div>
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="YEKTA TEAM Ana Sayfa">
         <img src="logo.png" alt="YEKTA TEAM Logo">
-        <div class="brand-text">
-          <strong>YEKTA TEAM</strong>
-          <span>İnsansız Kara Araçları</span>
-        </div>
+        <span><strong>YEKTA TEAM</strong><small>Autonomous UGV Systems</small></span>
       </a>
-
-      <ul class="nav-links">
-        <li><a href="index.html">Ana Sayfa</a></li>
-        <li><a href="about.html">Hakkımızda</a></li>
-        <li><a href="projects.html">Projeler</a></li>
-        <li><a class="active" href="teams.html">Ekipler</a></li>
-        <li><a href="apply.html">Başvuru</a></li>
-        <li><a href="contact.html">İletişim</a></li>
-      </ul>
-
-      <a href="contact.html" class="nav-btn">Bize Ulaşın</a>
+      <button class="menu-toggle" aria-label="Menüyü aç/kapat">☰</button>
+      <nav class="nav-links"><a class="" href="index.html">Ana Sayfa</a>
+<a class="" href="about.html">Hakkımızda</a>
+<a class="" href="projects.html">Projeler</a>
+<a class="active" href="teams.html">Ekipler</a>
+<a class="" href="apply.html">Başvuru</a>
+<a class="" href="contact.html">İletişim</a></nav>
+      <a class="nav-cta" href="apply.html">Katıl / Sponsor Ol</a>
     </div>
-  </div>
+  </header>
 
   <main>
     <section class="page-hero">
-      <div class="container">
-        <span class="eyebrow">Ekipler</span>
-        <h1 class="title">Gücümüz <span class="accent">birlikteliğimizden</span></h1>
-        <p class="lead">
-          Takım yapımız, farklı alanlarda çalışan birimlerin ortak hedef etrafında buluştuğu çok yönlü bir organizasyon yapısına dayanır.
-        </p>
+      <div class="container ">
+        <div class="reveal">
+          <span class="eyebrow">Ekipler</span>
+          <h1>Gücümüz <span>birlikteliğimizden</span></h1>
+          <p class="lead">Farklı uzmanlık alanları tek bir hedef etrafında birleşir: güvenilir ve etkileyici bir insansız kara aracı geliştirmek.</p>
+          
+        </div>
+        
       </div>
     </section>
-
-    <section class="section">
-  <div class="container">
-
-    <div class="card" style="margin-bottom:22px;">
-      <span class="eyebrow">Takım Yapısı</span>
-      <h3 style="margin-bottom:8px;">Takım Koordinasyonu</h3>
-      <p><strong>Münibe Cevher Kaya</strong>, YEKTA TEAM takım kaptanı olarak genel koordinasyon, süreç yönetimi ve birimler arası iletişimi yürütmektedir.</p>
-    </div>
-
-    <div class="team-grid">
-
-      <div class="team-card">
-        <img class="team-icon" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=300&q=80" alt="Yazılım Birimi">
-        <h3>Yazılım Birimi</h3>
-        <p><strong>Birim Sorumlusu:</strong> Selin Sert</p>
-        <ul class="member-list">
-          <li>Münibe Cevher Kaya</li>
-          <li>Ahmet Emir Dündar</li>
-          <li>Zeynep İrem Akbulut</li>
-          <li>Bilge Ateş</li>
-        </ul>
-      </div>
-
-      <div class="team-card">
-        <img class="team-icon" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=300&q=80" alt="Elektrik Elektronik Birimi">
-        <h3>Elektrik-Elektronik Birimi</h3>
-        <p><strong>Birim Sorumlusu:</strong> Baran Aslan</p>
-        <ul class="member-list">
-          <li>Yüksel Ulukan</li>
-        </ul>
-      </div>
-
-      <div class="team-card">
-        <img class="team-icon" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=300&q=80" alt="Mekatronik Birimi">
-        <h3>Mekatronik Birimi</h3>
-        <p><strong>Birim Sorumlusu:</strong> Ömer Demirel</p>
-        <ul class="member-list">
-          <li>Emre Barış Karakuş</li>
-          <li>Ülkü Türkan Kılıçarslan</li>
-          <li>Yusuf Murat Topuz</li>
-        </ul>
-      </div>
-
-      <div class="team-card">
-        <img class="team-icon" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=300&q=80" alt="Endüstriyel Tasarım Birimi">
-        <h3>Endüstriyel Tasarım Birimi</h3>
-        <p><strong>Birim Sorumlusu:</strong> Reyhan İşbilir</p>
-        <ul class="member-list">
-          <li>Öykü Gül Yılmaz</li>
-          <li>Şevval Niçin</li>
-        </ul>
-      </div>
-
-      <div class="team-card">
-        <img class="team-icon" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=300&q=80" alt="Sponsorluk Birimi">
-        <h3>Sponsorluk Birimi</h3>
-        <p><strong>Birim Alanı:</strong> Kurumsal iletişim, sponsorluk ve iş birliği süreçleri</p>
-        <ul class="member-list">
-          <li>Tuğçe Karamuk</li>
-          <li>İrem Kuru</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
+    
+<section class="section"><div class="container"><div class="lead-card reveal"><h2>Takım Koordinasyonu</h2><p><strong>Münibe Cevher Kaya</strong>, YEKTA TEAM takım kaptanı olarak genel koordinasyon, süreç yönetimi ve birimler arası iletişimi yürütmektedir.</p></div><div class="team-grid reveal">
+  <article class="team-card"><h3>Yazılım Birimi</h3><p><b>Birim Sorumlusu:</b> Selin Sert</p><ul><li>Münibe Cevher Kaya</li><li>Ahmet Emir Dündar</li><li>Zeynep İrem Akbulut</li><li>Bilge Ateş</li></ul><div><span>ROS</span><span>OpenCV</span><span>Python</span></div></article>
+  <article class="team-card"><h3>Elektrik-Elektronik</h3><p><b>Birim Sorumlusu:</b> Baran Aslan</p><ul><li>Yüksel Ulukan</li></ul><div><span>PCB</span><span>Power</span><span>Sensor</span></div></article>
+  <article class="team-card"><h3>Mekatronik</h3><p><b>Birim Sorumlusu:</b> Ömer Demirel</p><ul><li>Şasi, hareket ve mekanik entegrasyon ekibi</li></ul><div><span>CAD</span><span>Suspension</span><span>UGV</span></div></article>
+  <article class="team-card"><h3>Sponsorluk & İletişim</h3><p><b>Odak:</b> Kurumsal iletişim</p><ul><li>Sponsor görüşmeleri, içerik ve süreç takibi</li></ul><div><span>Brand</span><span>PR</span><span>Docs</span></div></article>
+</div></div></section>
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <div>© 2026 YEKTA TEAM. Tüm hakları saklıdır.</div>
-      <div>yektateam.me</div>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="footer-brand"><img src="logo.png" alt="YEKTA TEAM Logo"><strong>YEKTA TEAM</strong></a>
+        <p>İnsansız kara araçları, otonom sistemler ve multidisipliner mühendislik kültürü.</p>
+      </div>
+      <div><h4>Sayfalar</h4><a href="about.html">Hakkımızda</a><a href="projects.html">Projeler</a><a href="teams.html">Ekipler</a><a href="apply.html">Başvuru</a></div>
+      <div><h4>İletişim</h4><a href="mailto:yekta.team26@gmail.com">yekta.team26@gmail.com</a><a href="https://www.instagram.com/yekta.team.ika" target="_blank">Instagram</a><a href="https://www.linkedin.com/company/yekta-team/" target="_blank">LinkedIn</a></div>
     </div>
+    <div class="container copyright">© 2026 YEKTA TEAM. Tüm hakları saklıdır.</div>
   </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
