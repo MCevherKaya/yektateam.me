@@ -1,90 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="YEKTA TEAM - İstanbul Ticaret Üniversitesi öğrencilerinden oluşan insansız kara aracı ve otonom sistemler AR-GE takımı.">
-  <meta name="theme-color" content="#050806">
-  <meta property="og:title" content="YEKTA TEAM | Autonomous UGV Systems">
-  <meta property="og:description" content="YEKTA TEAM | İnsansız Kara Aracı ve Otonom Sistemler">
-  <meta property="og:image" content="vehicle.png">
-  <title>YEKTA TEAM | Autonomous UGV Systems</title>
-  <link rel="icon" type="image/png" href="logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YEKTA TEAM | Otonom Kara Aracı Takımı</title>
+  <meta name="description" content="YEKTA TEAM, İstanbul Ticaret Üniversitesi öğrencilerinden oluşan insansız kara aracı ve otonom sistemler geliştiren mühendislik takımıdır.">
+  <meta property="og:title" content="YEKTA TEAM | Otonom Kara Aracı Takımı">
+  <meta property="og:description" content="Sahada güvenilir, geliştirilebilir ve yenilikçi otonom kara sistemleri geliştiren öğrenci mühendislik takımı.">
+  <meta property="og:image" content="logo.png">
+  <link rel="icon" href="logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
-  <div class="noise"></div>
-  <header class="site-header" id="top">
-    <div class="container nav">
-      <a href="index.html" class="brand" aria-label="YEKTA TEAM Ana Sayfa">
-        <img src="logo.png" alt="YEKTA TEAM Logo">
-        <span><strong>YEKTA TEAM</strong><small>Autonomous UGV Systems</small></span>
-      </a>
-      <button class="menu-toggle" aria-label="Menüyü aç/kapat">☰</button>
-      <nav class="nav-links"><a class="active" href="index.html">Ana Sayfa</a>
-<a class="" href="about.html">Hakkımızda</a>
-<a class="" href="projects.html">Projeler</a>
-<a class="" href="teams.html">Ekipler</a>
-<a class="" href="apply.html">Başvuru</a>
-<a class="" href="contact.html">İletişim</a></nav>
-      <a class="nav-cta" href="apply.html">Katıl / Sponsor Ol</a>
-    </div>
-  </header>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><img src="logo.png" alt="YEKTA TEAM logosu"><span>YEKTA TEAM</span></a>
+    <button class="nav-toggle" aria-label="Menüyü aç">☰</button>
+    <nav class="nav-links">
+      <a class="active" href="index.html">Ana Sayfa</a>
+      <a href="about.html">Hakkımızda</a>
+      <a href="projects.html">Projeler</a>
+      <a href="teams.html">Takım</a>
+      <a href="contact.html">İletişim</a>
+      <a href="apply.html">Katıl</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="reveal">
-          <span class="eyebrow">YEKTA TEAM</span>
-          <h1>Otonom sistemler için <span>premium mühendislik takımı</span></h1>
-          <p class="lead">İstanbul Ticaret Üniversitesi öğrencileri tarafından kurulan YEKTA TEAM; insansız kara araçları, yapay zekâ destekli algılama ve sahada çalışabilir mühendislik çözümleri geliştirir.</p>
-          <div class="hero-actions"><a class="btn btn-primary" href="projects.html">Projeyi İncele</a><a class="btn btn-ghost" href="contact.html">İletişime Geç</a></div>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div data-reveal>
+        <div class="eyebrow">Autonomous Ground Systems</div>
+        <h1>Geleceğin kara sistemlerini <span>bugün geliştiriyoruz.</span></h1>
+        <p>YEKTA TEAM; mekanik, elektronik ve yazılım disiplinlerini bir araya getirerek insansız kara aracı geliştiren, sahaya odaklı çalışan bir öğrenci mühendislik takımıdır.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="projects.html">Projeyi İncele</a>
+          <a class="btn btn-secondary" href="contact.html">Sponsor Ol</a>
         </div>
-        <div class="vehicle-stage reveal"><div class="scan"></div><img src="vehicle.png" alt="YEKTA TEAM İnsansız Kara Aracı"><div class="hud-card hud-1">AI Navigation</div><div class="hud-card hud-2">LiDAR • Vision • ROS</div></div>
       </div>
-    </section>
-    
-<section class="section stats-section">
-  <div class="container stats-grid reveal">
-    <div><strong data-count="20">0</strong><span>Takım Üyesi</span></div>
-    <div><strong data-count="5">0</strong><span>Teknik Birim</span></div>
-    <div><strong data-count="1">0</strong><span>Otonom UGV</span></div>
-    <div><strong data-count="2026">0</strong><span>TEKNOFEST Hedefi</span></div>
-  </div>
-</section>
-<section class="section">
-  <div class="container split">
-    <div class="reveal"><span class="eyebrow">Misyon</span><h2>Sadece yarışmaya değil, üretim kültürüne hazırlanıyoruz.</h2><p>Yazılım, elektronik, mekatronik ve organizasyon birimlerini tek bir mühendislik hedefi etrafında birleştiriyoruz. Her karar; test edilebilir, geliştirilebilir ve sahada çalışabilir bir sistem üretmek için alınıyor.</p></div>
-    <div class="feature-grid reveal">
-      <article><b>01</b><h3>Otonom Algılama</h3><p>Kamera, LiDAR ve sensör verileriyle çevresini yorumlayabilen sistem mimarisi.</p></article>
-      <article><b>02</b><h3>Sağlam Mekanik</h3><p>Farklı zemin koşullarına uyum sağlayan süspansiyon ve şasi yaklaşımı.</p></article>
-      <article><b>03</b><h3>Entegre Yazılım</h3><p>ROS, görüntü işleme ve görev kontrol altyapısı için modüler yazılım düzeni.</p></article>
-      <article><b>04</b><h3>Takım Disiplini</h3><p>Planlama, dokümantasyon, sponsor ilişkileri ve sürdürülebilir ekip yönetimi.</p></article>
+      <div class="hero-card" data-reveal>
+        <img class="logo-mark" src="logo.png" alt="YEKTA TEAM">
+        <img class="vehicle" src="vehicle.png" alt="YEKTA TEAM insansız kara aracı">
+        <div class="stat-strip">
+          <div class="stat"><strong>UGV</strong><span>Odak Alanı</span></div>
+          <div class="stat"><strong>AR-GE</strong><span>Yaklaşım</span></div>
+          <div class="stat"><strong>2026</strong><span>Hedef</span></div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-<section class="section dark-panel">
-  <div class="container"><span class="eyebrow">Teknolojiler</span><h2 class="section-title">Kullandığımız teknoloji ekosistemi</h2><div class="tech-cloud reveal"><span>ROS</span><span>OpenCV</span><span>YOLO</span><span>Python</span><span>C++</span><span>LiDAR</span><span>STM32</span><span>CAN BUS</span><span>PCB</span><span>CAD</span><span>Sensor Fusion</span><span>Autonomous Control</span></div></div>
-</section>
-<section class="section">
-  <div class="container cta reveal"><h2>YEKTA TEAM ile iş birliği yapmak ister misiniz?</h2><p>Ürün desteği, teknik destek, sponsorluk ve kurumsal iş birlikleri için bizimle iletişime geçebilirsiniz.</p><a class="btn btn-primary" href="apply.html">Başvuru Sayfasına Git</a></div>
-</section>
-  </main>
+  </section>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <a href="index.html" class="footer-brand"><img src="logo.png" alt="YEKTA TEAM Logo"><strong>YEKTA TEAM</strong></a>
-        <p>İnsansız kara araçları, otonom sistemler ve multidisipliner mühendislik kültürü.</p>
+  <section class="section">
+    <div class="container split">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Takım ruhu</div>
+        <h2>Bir araçtan fazlasını inşa ediyoruz.</h2>
+        <p>Amacımız yalnızca yarışmaya katılmak değil; mühendislik kültürü, üretim disiplini ve sahada çalışan gerçek çözümler ortaya koymak.</p>
       </div>
-      <div><h4>Sayfalar</h4><a href="about.html">Hakkımızda</a><a href="projects.html">Projeler</a><a href="teams.html">Ekipler</a><a href="apply.html">Başvuru</a></div>
-      <div><h4>İletişim</h4><a href="mailto:yekta.team26@gmail.com">yekta.team26@gmail.com</a><a href="https://www.instagram.com/yekta.team.ika" target="_blank">Instagram</a><a href="https://www.linkedin.com/company/yekta-team/" target="_blank">LinkedIn</a></div>
+      <div class="panel" data-reveal>
+        <h3>Net hedef, sade anlatım, güçlü izlenim.</h3>
+        <p>Bu site; sponsorların, jüri üyelerinin ve yeni takım adaylarının YEKTA TEAM’i ilk bakışta profesyonel, güvenilir ve gelişmeye açık bir ekip olarak görmesi için tasarlandı.</p>
+        <p>Kalabalık teknoloji listeleri yerine; gerçek çalışma alanlarımızı, proje disiplinimizi ve takım değerimizi öne çıkarıyoruz.</p>
+      </div>
     </div>
-    <div class="container copyright">© 2026 YEKTA TEAM. Tüm hakları saklıdır.</div>
-  </footer>
-  <script src="script.js"></script>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Odaklandığımız alanlar</div>
+        <h2>Sahaya çıkan mühendislik.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature" data-reveal><span class="num">01</span><h3>Otonom Kara Aracı</h3><p>Görev senaryolarına uygun, dayanıklı ve geliştirilebilir insansız kara aracı mimarisi.</p></article>
+        <article class="feature" data-reveal><span class="num">02</span><h3>Kontrol ve Yazılım</h3><p>Aracın hareket, karar ve görev yönetimi için modüler yazılım yaklaşımı.</p></article>
+        <article class="feature" data-reveal><span class="num">03</span><h3>Mekanik Tasarım</h3><p>Şasi, süspansiyon, üretilebilirlik ve bakım kolaylığı odağında sistem tasarımı.</p></article>
+        <article class="feature" data-reveal><span class="num">04</span><h3>Elektronik Altyapı</h3><p>Güç dağıtımı, bağlantı güvenliği ve saha testlerine uygun elektronik entegrasyon.</p></article>
+        <article class="feature" data-reveal><span class="num">05</span><h3>Test Kültürü</h3><p>Her kararın sahada doğrulanması, hata kaynaklarının ölçülmesi ve sürekli iyileştirme.</p></article>
+        <article class="feature" data-reveal><span class="num">06</span><h3>Takım Gelişimi</h3><p>Öğrenen, üreten ve sorumluluk alan üyelerle sürdürülebilir mühendislik ortamı.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container showcase">
+      <div class="image-box" data-reveal><img src="vehicle.png" alt="YEKTA TEAM aracı"></div>
+      <div class="panel" data-reveal>
+        <div class="eyebrow">Proje vitrini</div>
+        <h3>İnsansız Kara Aracı</h3>
+        <p>YEKTA TEAM’in ana projesi; farklı mühendislik disiplinlerinin birlikte çalıştığı, saha testleriyle geliştirilen bir otonom kara aracı platformudur.</p>
+        <p>Tasarım yaklaşımımız; görünüşten çok işlevi, gösterişten çok güvenilirliği ve tek seferlik çözümlerden çok geliştirilebilirliği öncelemektedir.</p>
+        <a class="btn btn-primary" href="projects.html">Detayları Gör</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Yol haritası</div>
+        <h2>Planlı, ölçülebilir, geliştirilebilir.</h2>
+      </div>
+      <div class="roadmap">
+        <div class="step" data-reveal><strong>Aşama 01</strong><div><h3>Kavramsal Tasarım</h3><p>Görev ihtiyaçlarının belirlenmesi, sistem mimarisi ve ana tasarım kararları.</p></div></div>
+        <div class="step" data-reveal><strong>Aşama 02</strong><div><h3>Üretim ve Entegrasyon</h3><p>Mekanik, elektronik ve yazılım parçalarının birlikte çalışacak şekilde hazırlanması.</p></div></div>
+        <div class="step" data-reveal><strong>Aşama 03</strong><div><h3>Saha Testleri</h3><p>Gerçek koşullarda performans, güvenilirlik ve kontrol davranışlarının doğrulanması.</p></div></div>
+        <div class="step" data-reveal><strong>Aşama 04</strong><div><h3>Yarışma Hazırlığı</h3><p>Sunum, teknik rapor, görev senaryosu ve sistem kararlılığının son hale getirilmesi.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta-box" data-reveal>
+      <div><h2>Geleceği birlikte üretelim.</h2><p>Sponsorluk, iş birliği ve teknik destek için YEKTA TEAM ile iletişime geçebilirsiniz.</p></div>
+      <a class="btn btn-primary" href="contact.html">İletişime Geç</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container footer-inner"><strong>YEKTA TEAM</strong><span>© <span id="year"></span> — Otonom kara sistemleri mühendislik takımı.</span></div></footer>
+<script src="script.js?v=3"></script>
 </body>
 </html>
