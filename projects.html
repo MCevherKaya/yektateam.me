@@ -1,1 +1,101 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Projeler | YEKTA TEAM</title><meta name="description" content="YEKTA TEAM projeleri."><link rel="icon" href="logo.png" type="image/png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=3"></head><body><header class="nav"><div class="container nav-inner"><a class="brand" href="index.html"><img src="logo.png" alt="YEKTA TEAM"><span>YEKTA TEAM</span></a><button class="nav-toggle">☰</button><nav class="nav-links"><a href="index.html">Ana Sayfa</a><a href="about.html">Hakkımızda</a><a class="active" href="projects.html">Projeler</a><a href="teams.html">Takım</a><a href="contact.html">İletişim</a><a href="apply.html">Katıl</a></nav></div></header><main><section class="page-hero"><div class="container section-head" data-reveal><div class="eyebrow">Projeler</div><h1>İnsansız kara aracı platformu.</h1><p>Ana projemiz; üretilebilir, geliştirilebilir ve test edilebilir bir kara aracı mimarisi kurmak üzerine şekillenmektedir.</p></div></section><section class="section"><div class="container showcase"><div class="image-box" data-reveal><img src="vehicle.png" alt="YEKTA TEAM aracı"></div><div class="panel" data-reveal><h3>YEKTA UGV</h3><p>YEKTA UGV; mekanik dayanım, elektronik entegrasyon, kontrol yazılımı ve saha testlerini tek platformda birleştiren insansız kara aracı projemizdir.</p><p>Proje süreci; tasarım, üretim, entegrasyon, test ve iyileştirme döngüleriyle ilerler.</p></div></div></section><section class="section"><div class="container feature-grid"><article class="feature" data-reveal><span class="num">01</span><h3>Güçlü Gövde</h3><p>Saha koşullarına uygun, bakım ve geliştirme ihtiyacını düşünen gövde yaklaşımı.</p></article><article class="feature" data-reveal><span class="num">02</span><h3>Kontrollü Hareket</h3><p>Güvenli sürüş, frenleme ve görev senaryolarına uygun hareket kontrolü.</p></article><article class="feature" data-reveal><span class="num">03</span><h3>Modüler Altyapı</h3><p>Gelecek geliştirmelere açık, değiştirilebilir ve ölçeklenebilir sistem yapısı.</p></article></div></section></main><footer class="footer"><div class="container footer-inner"><strong>YEKTA TEAM</strong><span>© <span id="year"></span></span></div></footer><script src="script.js?v=3"></script></body></html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeler | YEKTA TEAM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="nav-wrap">
+    <div class="container navbar">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="YEKTA TEAM Logo">
+        <div class="brand-text">
+          <strong>YEKTA TEAM</strong>
+          <span>İnsansız Kara Araçları</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="about.html">Hakkımızda</a></li>
+        <li><a class="active" href="projects.html">Projeler</a></li>
+        <li><a href="teams.html">Ekipler</a></li>
+        <li><a href="apply.html">Başvuru</a></li>
+        <li><a href="contact.html">İletişim</a></li>
+      </ul>
+
+      <a href="contact.html" class="nav-btn">Bize Ulaşın</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Projeler</span>
+        <h1 class="title">Üzerinde çalıştığımız <span class="accent">temel alanlar</span></h1>
+        <p class="lead">
+          Proje yapımız; araç geliştirme, entegrasyon, sistem testleri ve yarışma hazırlık sürecini kapsayan bütüncül bir çalışma yaklaşımına dayanır.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container project-grid">
+        <div class="project-card">
+          <h3>İnsansız Kara Aracı Geliştirme</h3>
+          <p>
+            Araç yapısı, görev mantığı ve yarışma ihtiyaçları doğrultusunda sürdürülen ana geliştirme süreci.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Elektrik ve Güç Altyapısı</h3>
+          <p>
+            Batarya, enerji yönetimi ve güç sürekliliğini sağlayan sistemlerin planlanması ve uygulanması.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Tahrik ve Hareket Sistemi</h3>
+          <p>
+            Farklı arazi koşullarında verimli ve güvenilir hareket sağlayacak sürüş altyapısının geliştirilmesi.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Otonom Sürüş Yazılımları</h3>
+          <p>
+            Araç davranışlarının, karar mekanizmalarının ve temel görev akışlarının yazılım tarafında kurgulanması.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Sistem Entegrasyonu</h3>
+          <p>
+            Tüm alt birimlerin ortak şekilde çalışmasını sağlayacak entegrasyon ve test süreçlerinin yürütülmesi.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Test ve Doğrulama Süreci</h3>
+          <p>
+            Simülasyon, saha denemeleri ve sistem kontrolleri ile projenin güvenilir şekilde ilerletilmesi.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 YEKTA TEAM. Tüm hakları saklıdır.</div>
+      <div>yektateam.me</div>
+    </div>
+  </footer>
+
+</body>
+</html>
