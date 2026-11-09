@@ -1,136 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="logo.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YEKTA TEAM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131a">
+  <meta name="description" content="İstanbul Ticaret Üniversitesi YEKTA Takımı. İnsansız kara aracımızı, TEKNOFEST 2026 yolculuğumuzu ve sponsorluk seçeneklerini keşfedin.">
+  <meta property="og:title" content="YEKTA Takımı | İnsansız Kara Aracı">
+  <meta property="og:description" content="TEKNOFEST 2026 İKA finaline çıkan öğrenci takımımızı ve iş birliği seçeneklerini keşfedin.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yektateam.me/assets/demo.webp">
+  <link rel="icon" href="assets/logo.png">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>YEKTA Takımı | İnsansız Kara Aracı ve Sponsorluk</title>
 </head>
 <body>
-
-  <div class="nav-wrap">
-    <div class="container navbar">
-      <a href="index.html" class="brand">
-        <img src="logo.png" alt="YEKTA TEAM Logo">
-        <div class="brand-text">
-          <strong>YEKTA TEAM</strong>
-          <span>İnsansız Kara Araçları</span>
-        </div>
-      </a>
-
-      <ul class="nav-links">
-        <li><a class="active" href="index.html">Ana Sayfa</a></li>
-        <li><a href="about.html">Hakkımızda</a></li>
-        <li><a href="projects.html">Projeler</a></li>
-        <li><a href="teams.html">Ekipler</a></li>
-        <li><a href="apply.html">Başvuru</a></li>
-        <li><a href="contact.html">İletişim</a></li>
-      </ul>
-
-      <a href="contact.html" class="nav-btn">Bize Ulaşın</a>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header class="site-header" id="baslangic">
+    <div class="wrap nav">
+      <a class="brand" href="#baslangic"><img src="assets/logo.png" alt="" width="39" height="39"><span><strong>YEKTA</strong><small>İNSANSIZ KARA ARACI</small></span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" hidden>Menü <span aria-hidden="true">☰</span></button>
+      <nav id="main-nav" aria-label="Ana menü">
+        <a href="#arac">Araç</a><a href="#saha">Sahadan</a><a href="#takim">Takım</a><a href="#sponsorluk">Sponsorluk</a>
+      </nav>
+      <a class="button button-nav" href="#iletisim">İş birliği yapalım <span aria-hidden="true">↗</span></a>
     </div>
-  </div>
+  </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">YEKTA TEAM</span>
-<h1 class="title">
-  AR-GE odaklı
-  <span class="accent">insansız kara aracı takımı</span>
-</h1>
-<p class="lead">
-  YEKTA TEAM, İstanbul Ticaret Üniversitesi öğrencileri tarafından kurulmuş;
-  yazılım, elektrik-elektronik, mekatronik, endüstriyel tasarım ve sponsorluk alanlarında
-  çalışan multidisipliner bir öğrenci AR-GE takımıdır.
-</p>
-
-          <div class="btn-row">
-            <a class="btn btn-primary" href="projects.html">Projeleri İncele</a>
-            <a class="btn btn-secondary" href="teams.html">Ekibi Tanı</a>
+  <main id="icerik">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker"><span class="signal"></span> İSTANBUL TİCARET ÜNİVERSİTESİ</p>
+          <h1 id="hero-title">Tasarladık.<br>Ürettik.<br><em>Sahaya çıktık.</em></h1>
+          <p class="hero-intro">Biz YEKTA Takımı. Kendi insansız kara aracımızla ilk yılımızda TEKNOFEST finaline çıktık. Şimdi aracımızı yeni iş birlikleriyle geliştiriyoruz.</p>
+          <div class="actions">
+            <a class="button button-gold" href="#sponsorluk">Sponsorluk seçenekleri <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#arac">Aracı keşfet <span aria-hidden="true">↓</span></a>
           </div>
         </div>
+        <figure class="hero-visual">
+          <img src="assets/hero.webp" alt="YEKTA'nın bordo insansız kara aracı Mardin'deki TEKNOFEST parkurunda" fetchpriority="high" width="1350" height="1800">
+          <div class="frame-marks" aria-hidden="true"></div>
+          <div class="hero-tag"><span class="signal"></span> SAHA KAYDI / 01</div>
+          <figcaption><span>YEKTA İKA</span><span>MARDİN · 2026</span></figcaption>
+        </figure>
+      </div>
+      <dl class="wrap stats">
+        <div><dt>TEKNOFEST 2026 İKA</dt><dd><strong>22.</strong><span>yaklaşık 470 araç arasında</span></dd></div>
+        <div><dt>YARIŞMA AŞAMASI</dt><dd><strong>Final</strong><span>rapor ve teknik kontroller geçildi</span></dd></div>
+        <div><dt>DİSİPLİNLER ARASI EKİP</dt><dd><strong>25+</strong><span>öğrenci, tek araç</span></dd></div>
+      </dl>
+    </section>
 
-        <div class="hero-card">
-          <div class="hero-card-content">
-            <h3>Üreten, geliştiren, birlikte ilerleyen ekip</h3>
-<p>
-  Takımımız; yarışma sürecini yalnızca bir araç geliştirme hedefi olarak değil,
-  aynı zamanda sürdürülebilir bir mühendislik ve araştırma geliştirme kültürü oluşturma
-  süreci olarak görmektedir.
-</p>
+    <section class="section light" id="arac" aria-labelledby="arac-title">
+      <div class="wrap">
+        <p class="kicker index"><span>01</span> İNSANSIZ KARA ARACIMIZ</p>
+        <div class="vehicle-grid">
+          <figure class="photo vehicle-photo">
+            <img src="assets/workshop.webp" alt="YEKTA öğrencileri açık alanda bordo kara aracı üzerinde çalışıyor" loading="lazy" width="1012" height="1350">
+            <figcaption>01 / SAHA HAZIRLIĞI</figcaption>
+          </figure>
+          <div class="vehicle-copy">
+            <h2 id="arac-title">Atölyeden<br>yarışma parkuruna.</h2>
+            <p class="lead">Mekanik tasarım, elektronik ve otonom sürüşü aynı araçta bir araya getiriyoruz. Yeni dönemde daha çok saha testiyle aracın sürüş ve görev performansını iyileştirmeyi hedefliyoruz.</p>
+            <dl class="specs">
+              <div><dt>01</dt><dd><strong>Algılama</strong><span>Stereo derinlik ve görüntü işleme ile engel algılama</span></dd></div>
+              <div><dt>02</dt><dd><strong>Hesaplama</strong><span>Jetson Orin NX üzerinde ROS 2 tabanlı yazılım</span></dd></div>
+              <div><dt>03</dt><dd><strong>Kontrol</strong><span>STM32 ile hareket kontrolü ve uzaktan sürüş</span></dd></div>
+            </dl>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container grid-2">
-        <div class="card">
-          <span class="eyebrow">Hakkımızda</span>
-          <h2 class="title">Tutku, Disiplin <span class="accent">ve Üretim</span></h2>
-          <p>
-            Takımımız, yarışma sürecine hazırlanırken mühendislik yaklaşımını ekip uyumu ve sürdürülebilir gelişim anlayışıyla birleştirir.
-          </p>
+    <section class="section field" id="saha" aria-labelledby="saha-title">
+      <div class="wrap">
+        <p class="kicker index"><span>02</span> SAHADAN KARELER</p>
+        <div class="section-head">
+          <h2 id="saha-title">İlk finalimiz.<br>Mardin, 2026.</h2>
+          <p class="lead">Yarışma alanında aracımızı tanıttık ve saha deneyimimizi yeni dönem için somut geliştirme başlıklarına dönüştürdük.</p>
         </div>
-
-        <div class="card">
-          <span class="eyebrow">Yaklaşımımız</span>
-          <h3>Güvenilir, düzenli ve gelişime açık</h3>
-          <p>
-            Hedefimiz; tasarım, entegrasyon, test ve geliştirme süreçlerini planlı şekilde ilerleterek
-            üniversitemizi en iyi biçimde temsil etmektir.
-          </p>
+        <div class="gallery">
+          <figure><a class="photo gallery-photo" href="assets/demo.webp" aria-label="Araç tanıtımı fotoğrafını büyüt"><img src="assets/demo.webp" alt="YEKTA üyeleri yarışma standında aracın bileşenlerini ziyaretçilere gösteriyor" loading="lazy" width="1200" height="800"><span class="photo-open" aria-hidden="true">↗</span></a><figcaption><span>01</span> Yarışma alanında araç tanıtımı</figcaption></figure>
+          <figure><a class="photo gallery-photo" href="assets/stand.webp" aria-label="Takım ve sponsor görünürlüğü fotoğrafını büyüt"><img src="assets/stand.webp" alt="Araç kapağı ve takım tişörtünde YEKTA'yı destekleyen markaların logoları" loading="lazy" width="1012" height="1350"><span class="photo-open" aria-hidden="true">↗</span></a><figcaption><span>02</span> Araçta ve takım tişörtünde marka görünürlüğü</figcaption></figure>
+          <figure><a class="photo gallery-photo" href="assets/final.webp" aria-label="Final takımı fotoğrafını büyüt"><img src="assets/final.webp" alt="YEKTA Takımı TEKNOFEST İKA yarışma alanının girişinde" loading="lazy" width="1200" height="900"><span class="photo-open" aria-hidden="true">↗</span></a><figcaption><span>03</span> YEKTA Takımı final alanında</figcaption></figure>
         </div>
       </div>
+    </section>
 
-      <section class="stats">
-
-  <div class="stat">
-    <h3>20+</h3>
-    <p>Takım Üyesi</p>
-  </div>
-
-  <div class="stat">
-    <h3>5</h3>
-    <p>Aktif Birim</p>
-  </div>
-
-  <div class="stat">
-    <h3>AR-GE</h3>
-    <p>Çalışma Yaklaşımı</p>
-  </div>
-
-  <div class="stat">
-    <h3>İKA</h3>
-    <p>Yarışma Odağı</p>
-  </div>
-
-</section>
-
-    <section class="section">
-      <div class="container cta-box">
-        <div>
-          <span class="eyebrow">İş Birliği</span>
-          <h3 style="font-size:1.7rem; margin-bottom:8px;">Sponsorluk ve teknik iş birliği görüşmelerine açığız.</h3>
-          <p style="color:rgba(244,234,223,.78);">
-            Takımımıza destek olmak veya iş birliği geliştirmek isterseniz bizimle iletişime geçebilirsiniz.
-          </p>
+    <section class="section light partnerships" id="sponsorluk" aria-labelledby="sponsor-title">
+      <div class="wrap">
+        <p class="kicker index"><span>03</span> SPONSORLUK & İŞ BİRLİĞİ</p>
+        <div class="section-head">
+          <h2 id="sponsor-title">Bir sonraki aracı<br>birlikte geliştirelim.</h2>
+          <p class="lead">Desteğinizi aracın hangi parçasına veya hangi geliştirme adımına ayıracağımızı birlikte belirleyelim. Markanız, iş birliğinin kapsamına göre araçta, takım tişörtünde ve proje içeriklerinde yer alabilir.</p>
         </div>
+        <div class="support-list">
+          <article><span>01 /</span><h3>Araç bileşenleri</h3><p>Tahrik, güç ve algılayıcı bileşenleri.</p></article>
+          <article><span>02 /</span><h3>Üretim ve test</h3><p>Prototip parça, ölçüm ve atölye desteği.</p></article>
+          <article><span>03 /</span><h3>Teknik gelişim</h3><p>Otonom sürüş ve entegrasyon için eğitim veya danışmanlık.</p></article>
+          <article><span>04 /</span><h3>Yarışma hazırlığı</h3><p>Katılım, ulaşım ve saha lojistiği için destek.</p></article>
+        </div>
+        <div class="pack-heading"><h3>Sponsorluk paketleri</h3><a class="text-link" href="assets/yekta-sponsorluk-dosyasi.pdf" target="_blank" rel="noopener">Sponsorluk dosyası <small>PDF</small> <span aria-hidden="true">↗</span></a></div>
+        <div class="package-grid">
+          <article class="package"><p class="pack-code">01 / BELİRLİ İHTİYAÇ</p><h4>Bronz</h4><p>Belirli bir parça veya ihtiyaca destek.</p><ul><li>Araç ve tişörtte standart boy logo</li><li>Teşekkür paylaşımı ve sponsor listesinde yer alma</li></ul><a class="text-link" href="mailto:yekta.team26@gmail.com?subject=YEKTA%20%7C%20Bronz%20Sponsorluk">Bronz paketi görüşelim <span aria-hidden="true">↗</span></a></article>
+          <article class="package"><p class="pack-code">02 / ALAN DESTEĞİ</p><h4>Gümüş</h4><p>Aracın bir geliştirme alanına destek.</p><ul><li>Araç ve tişörtte orta boy logo</li><li>Teşekkür paylaşımı ve ilgili proje içeriklerinde marka görünürlüğü</li></ul><a class="text-link" href="mailto:yekta.team26@gmail.com?subject=YEKTA%20%7C%20G%C3%BCm%C3%BC%C5%9F%20Sponsorluk">Gümüş paketi görüşelim <span aria-hidden="true">↗</span></a></article>
+          <article class="package"><p class="pack-code">03 / ÇOK ALANLI DESTEK</p><h4>Altın</h4><p>Birden çok geliştirme alanına destek.</p><ul><li>Araç ve tişörtte büyük boy logo</li><li>Teşekkür paylaşımı ve markaya özel tanıtım</li></ul><a class="text-link" href="mailto:yekta.team26@gmail.com?subject=YEKTA%20%7C%20Alt%C4%B1n%20Sponsorluk">Altın paketi görüşelim <span aria-hidden="true">↗</span></a></article>
+          <article class="package featured"><p class="pack-code">04 / DÖNEM DESTEĞİ</p><h4>Ana Sponsor</h4><p>Sezon boyunca birden çok ihtiyacı kapsayan iş birliği.</p><ul><li>Araç ve tişörtte en büyük logo alanı</li><li>Ortak içerik planı, teşekkür paylaşımı ve proje sunumu</li></ul><a class="text-link" href="mailto:yekta.team26@gmail.com?subject=YEKTA%20%7C%20Ana%20Sponsorluk">Ana sponsorluğu görüşelim <span aria-hidden="true">↗</span></a></article>
+        </div>
+        <p class="fine-print">Maddi katkı, malzeme, ekipman ve üretim desteği tüm paketlerde değerlendirilebilir. Logo yerleşimleri yarışma kurallarına göre belirlenir.</p>
+      </div>
+    </section>
 
-        <a class="btn btn-primary" href="apply.html">Başvuru Seçenekleri</a>
+    <section class="section team" id="takim" aria-labelledby="takim-title">
+      <div class="wrap team-grid">
+        <div>
+          <p class="kicker index"><span>04</span> YEKTA TAKIMI</p>
+          <h2 id="takim-title">Farklı disiplinler.<br>Tek araç.</h2>
+          <p class="lead">İstanbul Ticaret Üniversitesi öğrencileri olarak yazılım, elektronik, mekanik ve tasarım çalışmalarını aynı araçta birleştiriyoruz. Danışmanımız Muhammet Ceylan.</p>
+          <a class="text-link" href="https://forms.gle/cr97oegYqD5GUCSR9" target="_blank" rel="noopener">Takım başvuru formu <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="photo team-photo"><img src="assets/team.webp" alt="YEKTA Takımı ve insansız kara aracı TEKNOFEST standında" loading="lazy" width="1200" height="900"><figcaption>YEKTA TAKIMI / TEKNOFEST 2026</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="contact" id="iletisim" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div><p class="kicker index"><span>05</span> İLETİŞİM</p><h2 id="contact-title">İş birliğini<br>konuşalım.</h2></div>
+        <div>
+          <p>Bir ilk görüşme planlayalım. Aracı ve yeni dönem ihtiyaçlarımızı anlatalım, kurumunuza uygun destek kapsamını birlikte belirleyelim.</p>
+          <a class="button button-dark" href="mailto:yekta.team26@gmail.com?subject=YEKTA%20Tak%C4%B1m%C4%B1%20%7C%20Sponsorluk%20G%C3%B6r%C3%BC%C5%9Fmesi">Görüşme talep edin <span aria-hidden="true">↗</span></a>
+          <a class="email" href="mailto:yekta.team26@gmail.com">yekta.team26@gmail.com</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <div>© 2026 YEKTA TEAM. Tüm hakları saklıdır.</div>
-      <div>yektateam.me</div>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#baslangic"><img src="assets/logo.png" alt="" width="39" height="39"><span><strong>YEKTA</strong><small>İNSANSIZ KARA ARACI</small></span></a>
+      <p>İstanbul Ticaret Üniversitesi · Küçükyalı, İstanbul</p>
+      <div><a href="https://www.instagram.com/yekta.team.ika/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.linkedin.com/company/yekta-team/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
     </div>
   </footer>
 
+  <dialog id="photo-dialog" aria-label="Büyütülmüş saha fotoğrafı">
+    <div class="dialog-frame"><form method="dialog"><button aria-label="Fotoğrafı kapat">×</button></form><img alt=""><p></p></div>
+  </dialog>
 </body>
 </html>
