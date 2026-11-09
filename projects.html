@@ -1,1 +1,63 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="0; url=index.html#arac"><title>YEKTA Takımı</title></head><body><a href="index.html#arac">YEKTA Takımı sayfasına devam edin</a></body></html>
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="YEKTA’nın araç tasarımı, algılama, kontrol ve tahrik çalışmaları.">
+<meta name="theme-color" content="#101313">
+<meta property="og:title" content="Araç | YEKTA Takımı">
+<meta property="og:description" content="YEKTA’nın araç tasarımı, algılama, kontrol ve tahrik çalışmaları.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://yektateam.me/assets/demo.webp">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<title>Araç | YEKTA Takımı</title>
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+<header class="site-header">
+ <div class="wrap nav-bar">
+  <a class="brand" href="index.html" aria-label="YEKTA Takımı ana sayfa"><img src="assets/logo.png" alt="" width="42" height="42"><span>YEKTA <small>TAKIMI</small></span></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" hidden>Menü <span aria-hidden="true">☰</span></button>
+  <nav id="nav" aria-label="Ana menü"><a href="index.html">Ana Sayfa</a><a href="projects.html" aria-current="page">Araç</a><a href="about.html">Hakkımızda</a><a href="teams.html">Ekipler</a><a href="gallery.html">Saha Günlüğü</a><a class="mobile-sponsor" href="sponsorluk.html">Sponsorluk ↗</a></nav>
+  <div class="header-actions"><a class="header-instagram" aria-label="Instagram’da YEKTA" href="https://www.instagram.com/yekta.team.ika/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a><a class="button nav-action" href="sponsorluk.html" >Sponsorluk<span aria-hidden="true">↗</span></a></div>
+ </div>
+</header>
+<main id="main">
+<header class="wrap page-intro"><p class="eyebrow">01 / ARAÇ</p><h1>YEKTA İKA</h1><p class="lead">Yarışma görevleri için geliştirdiğimiz insansız kara aracı. Uzaktan kontrol, görüntü işleme ve otonom sürüş çalışmalarını tek platformda birleştiriyoruz.</p></header>
+<div class="wrap vehicle-layout"><section class="viewer" aria-label="YEKTA araç vitrini" data-viewer>
+    <div class="viewer-toolbar">
+      <span class="viewer-id"><i></i> YEKTA / İKA</span>
+      <div class="switch" aria-label="Araç görünümü" hidden><button type="button" data-view="design" aria-controls="view-design" aria-pressed="true">Tasarım</button><button type="button" data-view="field" aria-controls="view-field" aria-pressed="false">Saha</button></div>
+    </div>
+    <figure class="vehicle-frame design-view" id="view-design">
+      <div class="grid-lines" aria-hidden="true"></div>
+      <span class="vehicle-word" aria-hidden="true">YEKTA</span>
+      <img class="render" src="assets/vehicle-design.webp" alt="YEKTA insansız kara aracının tasarım görseli" width="1310" height="1200" fetchpriority="high">
+      <figcaption><span>01 / ARAÇ TASARIMI</span><span>KONSEPT GÖRSELİ</span></figcaption>
+    </figure>
+    <figure class="vehicle-frame field-view" id="view-field" hidden>
+      <img src="assets/hero.webp" alt="YEKTA’nın bordo prototipi Mardin’deki yarışma parkurunda" width="1350" height="1800" loading="lazy">
+      <figcaption><span>02 / SAHA PROTOTİPİ</span><span>MARDİN · 2026</span></figcaption>
+    </figure>
+  </section><aside class="tech-panel"><p class="eyebrow">SİSTEME YAKINDAN BAK</p><h2>Aracın bileşenleri</h2>
+ <details open><summary>Algılama ve otonomi</summary><p>Stereo derinlik ve görüntü işleme ile engel algılama. Jetson Orin NX üzerinde ROS 2 tabanlı yazılım.</p></details>
+ <details><summary>Kontrol ve haberleşme</summary><p>STM32 ile hareket kontrolü, uzaktan sürüş ve yer kontrolü.</p></details>
+ <details><summary>Mekanik ve tahrik</summary><p>Şasi, süspansiyon ve hareket sistemini birlikte geliştiriyoruz. Yeni dönemde farklı zeminlerde sürüş testlerini artırmayı hedefliyoruz.</p></details>
+ <details><summary>Elektrik ve güç</summary><p>Batarya, güç dağıtımı ve elektronik alt sistemlerin araç üzerinde entegrasyonu.</p></details>
+ <details><summary>Entegrasyon ve saha testi</summary><p>Alt sistemleri birlikte çalıştırıp sürüş ve görev performansını saha denemelerinde değerlendiriyoruz.</p></details>
+ </aside></div>
+<div class="wrap section compact"><a class="partner-banner" href="sponsorluk.html"><div><p class="eyebrow">TEKNİK İŞ BİRLİĞİ</p><h3>Bir bileşeni birlikte geliştirelim.</h3><p>Parça, ölçüm, prototip üretimi ve teknik uzmanlık desteği.</p></div><span aria-hidden="true">↗</span></a></div>
+</main>
+<footer class="site-footer">
+ <div class="wrap footer-grid">
+  <div><a class="brand" href="index.html" aria-label="YEKTA Takımı ana sayfa"><img src="assets/logo.png" alt="" width="42" height="42"><span>YEKTA <small>TAKIMI</small></span></a><p>İstanbul Ticaret Üniversitesi<br>Küçükyalı, İstanbul</p></div>
+  <div><strong>YEKTA</strong><a href="projects.html">Araç</a><a href="teams.html">Ekipler</a><a href="gallery.html">Saha Günlüğü</a></div>
+  <div><strong>Bağlantılar</strong><a href="sponsorluk.html">Sponsorluk</a><a href="apply.html">Takıma Katıl</a><a href="contact.html">İletişim</a></div>
+  <div><strong>Takip et</strong><a href="https://www.instagram.com/yekta.team.ika/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.linkedin.com/company/yekta-team/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="mailto:yekta.team26@gmail.com">yekta.team26@gmail.com</a></div>
+ </div>
+ <div class="wrap footer-base"><span>© 2026 YEKTA Takımı</span><a href="#main">Yukarı çık ↑</a></div>
+</footer>
+</body>
+</html>

@@ -1,22 +1,19 @@
 const menuButton = document.querySelector(".menu-toggle");
-const menu = document.querySelector("#main-nav");
-const narrow = window.matchMedia("(max-width: 760px)");
+const navigation = document.querySelector("#nav");
+const mobile = window.matchMedia("(max-width: 840px)");
 
 function setMenu(open) {
   menuButton.setAttribute("aria-expanded", String(open));
-  menu.hidden = narrow.matches && !open;
+  navigation.hidden = mobile.matches && !open;
 }
 
-function updateNavigation() {
-  menuButton.hidden = !narrow.matches;
+function matchNavigation() {
+  menuButton.hidden = !mobile.matches;
   setMenu(false);
 }
 
 menuButton.addEventListener("click", () => {
   setMenu(menuButton.getAttribute("aria-expanded") !== "true");
-});
-menu.addEventListener("click", (event) => {
-  if (event.target.closest("a") && narrow.matches) setMenu(false);
 });
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
@@ -24,26 +21,52 @@ document.addEventListener("keydown", (event) => {
     menuButton.focus();
   }
 });
-narrow.addEventListener("change", updateNavigation);
-updateNavigation();
+mobile.addEventListener("change", matchNavigation);
+matchNavigation();
 
-const dialog = document.querySelector("#photo-dialog");
-if (typeof dialog.showModal === "function") {
-  const largePhoto = dialog.querySelector("img");
-  const caption = dialog.querySelector("p");
+for (const viewer of document.querySelectorAll("[data-viewer]")) {
+  const buttons = [...viewer.querySelectorAll("[data-view]")];
+  viewer.querySelector(".switch").hidden = false;
+  for (const button of buttons) {
+    button.addEventListener("click", () => {
+      for (const choice of buttons) {
+        const selected = choice === button;
+        choice.setAttribute("aria-pressed", String(selected));
+        document.getElementById(choice.getAttribute("aria-controls")).hidden = !selected;
+      }
+    });
+  }
+}
 
-  document.querySelectorAll(".gallery-photo").forEach((link) => {
+const galleryControls = document.querySelector(".gallery-controls");
+if (galleryControls) {
+  const filters = [...galleryControls.querySelectorAll("button")];
+  const figures = [...document.querySelectorAll("[data-category]")];
+  galleryControls.hidden = false;
+  for (const filter of filters) {
+    filter.addEventListener("click", () => {
+      const category = filter.dataset.filter;
+      for (const button of filters) button.setAttribute("aria-pressed", String(button === filter));
+      for (const figure of figures) figure.hidden = category !== "all" && figure.dataset.category !== category;
+    });
+  }
+}
+
+const lightbox = document.querySelector(".lightbox");
+if (lightbox && typeof lightbox.showModal === "function") {
+  const image = lightbox.querySelector("img");
+  const caption = lightbox.querySelector("p");
+  for (const link of document.querySelectorAll(".gallery-link")) {
     link.addEventListener("click", (event) => {
       if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
-      const figure = link.closest("figure");
-      largePhoto.src = link.href;
-      largePhoto.alt = link.querySelector("img").alt;
-      caption.textContent = figure.querySelector("figcaption").lastChild.textContent.trim();
-      dialog.showModal();
+      image.src = link.href;
+      image.alt = link.querySelector("img").alt;
+      caption.textContent = image.alt;
+      lightbox.showModal();
     });
-  });
-  dialog.addEventListener("click", (event) => {
-    if (event.target === dialog) dialog.close();
+  }
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.close();
   });
 }
